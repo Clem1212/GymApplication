@@ -1,0 +1,104 @@
+{
+  "name": "WorkoutPlan",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "calisthenics",
+        "weighted",
+        "mixed"
+      ]
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ]
+    },
+    "goal": {
+      "type": "string",
+      "enum": [
+        "muscle_gain",
+        "weight_loss",
+        "maintenance",
+        "endurance",
+        "strength"
+      ]
+    },
+    "days_per_week": {
+      "type": "number"
+    },
+    "weeks_duration": {
+      "type": "number"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": false
+    },
+    "current_week": {
+      "type": "number",
+      "default": 1
+    },
+    "current_day": {
+      "type": "number",
+      "default": 1
+    },
+    "completed_days": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "schedule": {
+      "type": "array",
+      "description": "Weekly workout schedule",
+      "items": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "type": "string"
+          },
+          "focus": {
+            "type": "string"
+          },
+          "exercises": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "sets": {
+                  "type": "number"
+                },
+                "reps": {
+                  "type": "string"
+                },
+                "rest_seconds": {
+                  "type": "number"
+                },
+                "notes": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "name",
+    "type"
+  ]
+}

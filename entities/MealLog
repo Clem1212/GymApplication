@@ -1,0 +1,62 @@
+{
+  "name": "MealLog",
+  "type": "object",
+  "properties": {
+    "meal_name": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Photo of the meal"
+    },
+    "calories": {
+      "type": "number"
+    },
+    "protein": {
+      "type": "number",
+      "description": "Protein in grams"
+    },
+    "carbs": {
+      "type": "number",
+      "description": "Carbohydrates in grams"
+    },
+    "fat": {
+      "type": "number",
+      "description": "Fat in grams"
+    },
+    "meal_type": {
+      "type": "string",
+      "enum": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack"
+      ]
+    },
+    "meal_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "food_items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "portion": {
+            "type": "string"
+          },
+          "calories": {
+            "type": "number"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "meal_name",
+    "meal_date"
+  ]
+}

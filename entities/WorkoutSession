@@ -1,0 +1,53 @@
+{
+  "name": "WorkoutSession",
+  "type": "object",
+  "properties": {
+    "exercise_name": {
+      "type": "string",
+      "description": "Name of the exercise performed"
+    },
+    "video_url": {
+      "type": "string",
+      "description": "URL of the uploaded workout video"
+    },
+    "form_analysis": {
+      "type": "string",
+      "description": "AI-generated form feedback"
+    },
+    "form_score": {
+      "type": "number",
+      "description": "Score out of 100 for form quality"
+    },
+    "improvements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of improvements needed"
+    },
+    "sets": {
+      "type": "number"
+    },
+    "reps": {
+      "type": "number"
+    },
+    "weight": {
+      "type": "number",
+      "description": "Weight used in lbs/kg"
+    },
+    "duration_minutes": {
+      "type": "number"
+    },
+    "workout_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "calories_burned": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "exercise_name",
+    "workout_date"
+  ]
+}

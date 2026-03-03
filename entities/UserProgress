@@ -1,0 +1,63 @@
+{
+  "name": "UserProgress",
+  "type": "object",
+  "properties": {
+    "current_streak": {
+      "type": "number",
+      "default": 0
+    },
+    "longest_streak": {
+      "type": "number",
+      "default": 0
+    },
+    "total_workouts": {
+      "type": "number",
+      "default": 0
+    },
+    "total_calories_burned": {
+      "type": "number",
+      "default": 0
+    },
+    "xp_points": {
+      "type": "number",
+      "default": 0
+    },
+    "level": {
+      "type": "number",
+      "default": 1
+    },
+    "badges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "last_workout_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "fitness_goal": {
+      "type": "string",
+      "enum": [
+        "muscle_gain",
+        "weight_loss",
+        "maintenance",
+        "endurance"
+      ],
+      "default": "maintenance"
+    },
+    "daily_calorie_target": {
+      "type": "number"
+    },
+    "daily_protein_target": {
+      "type": "number"
+    },
+    "weight_current": {
+      "type": "number"
+    },
+    "weight_goal": {
+      "type": "number"
+    }
+  },
+  "required": []
+}
