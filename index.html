@@ -1,17 +1,11 @@
-const db = globalThis.__B44_DB__ || {
-  auth: { isAuthenticated: async () => false, me: async () => null },
-  entities: new Proxy({}, { get: () => ({ filter: async () => [], get: async () => null, create: async () => ({}), update: async () => ({}), delete: async () => ({}) }) }),
-  integrations: { Core: { UploadFile: async () => ({ file_url: '' }) } }
-};
-
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="/manifest.json" />
-    <title>Gym APP</title>
+    <title>Gym App</title>
   </head>
   <body>
     <div id="root"></div>
